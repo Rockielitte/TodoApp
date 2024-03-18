@@ -18,7 +18,7 @@ import { addTodo, clearAllCompleted } from "@/redux/slices/todo";
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
 });
-
+import logo from "@/assets/logo.png";
 type FormSchemaType = z.infer<typeof formSchema>;
 export function Todo() {
   const [catorgery, setCatorgery] = useState("all");
@@ -60,7 +60,14 @@ export function Todo() {
             className="h-full flex flex-col overflow-auto"
           >
             <div className="flex items-center px-4 py-2 gap-4">
-              <h1 className="text-2xl font-bold text-white uppercase ">Todo</h1>
+              <h1 className="text-2xl font-bold text-white uppercase  rounded-full flex items-center gap-1">
+                <img
+                  src={logo}
+                  className="h-8 object-cover rounded-full
+                "
+                ></img>
+                <span>Todo</span>
+              </h1>
               <form
                 className="flex-1 relative"
                 noValidate
