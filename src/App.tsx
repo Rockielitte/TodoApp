@@ -4,7 +4,7 @@ import { Todo } from "./components/todo/todo";
 function App() {
   return (
     <div
-      className="h-screen flex flex-col justify-start  max-sm:pt-6 overflow-y-auto pt-10 truncate p-2"
+      className="h-screen flex flex-col justify-start  max-sm:pt-6 overflow-y-auto pt-10 truncate p-2 max-sm:px-0.5"
       style={{
         background: "var(--gradient)",
       }}

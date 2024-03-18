@@ -112,7 +112,7 @@ export function Todo() {
               }}
             />
             <div className="bg-background rounded-lg flex-1 flex flex-col overflow-auto">
-              <div className="bg-background/95 p-4 flex md:flex-row flex-col gap-2 justify-between backdrop-blur supports-[backdrop-filter]:bg-background/60">
+              <div className="bg-background/95 p-2 max-sm:px-0.5 flex md:flex-row flex-col gap-2 justify-between backdrop-blur supports-[backdrop-filter]:bg-background/60">
                 <TabsList className="">
                   <TabsTrigger
                     value="all"
