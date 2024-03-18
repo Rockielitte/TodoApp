@@ -100,7 +100,7 @@ export const TodoList: FC<Props> = ({ catorgery }) => {
                         {itemSelected === item.id &&
                           (item.state === TODOSTATENUM.INCOMPLETE ? (
                             <div
-                              className="flex flex-row gap-0.5 items-center text-blue-500  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
+                              className="md:flex md:flex-row md:gap-0.5 items-center text-blue-500  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
                               onClick={() => {
                                 dispatch(
                                   toggleTodo({
@@ -118,7 +118,7 @@ export const TodoList: FC<Props> = ({ catorgery }) => {
                             </div>
                           ) : item.state === TODOSTATENUM.COMPLETED ? (
                             <div
-                              className="flex flex-row gap-0.5 items-center  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
+                              className="md:flex md:flex-row md:gap-0.5 items-center  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
                               onClick={() => {
                                 dispatch(
                                   toggleTodo({
@@ -135,9 +135,9 @@ export const TodoList: FC<Props> = ({ catorgery }) => {
                               <Minus />
                             </div>
                           ) : (
-                            <div className="font-bold flex gap-2 items-center ">
+                            <div className="font-bold flex gap-2 max-sm:gap-0.5 items-center ">
                               <div
-                                className="flex flex-row gap-0.5 items-center  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
+                                className="md:flex md:flex-row md:gap-0.5 items-center  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
                                 onClick={() => {
                                   dispatch(
                                     toggleTodo({
@@ -155,7 +155,7 @@ export const TodoList: FC<Props> = ({ catorgery }) => {
                               </div>
                               <span className="self-stretch w-0.5 bg-gradient-to-tl from-purple-50 to-indigo-400"></span>
                               <div
-                                className="flex flex-row gap-0.5 items-center text-red-500 font-bold  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
+                                className="md:flex md:flex-row md:gap-0.5 items-center text-red-500 font-bold  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
                                 onClick={() => {
                                   dispatch(
                                     toggleTodo({
