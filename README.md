@@ -16,14 +16,15 @@
 
 `Click on the output URL on Terminal || http://localhost:5173/`
 
-# DEMO | [TodoApp](https://todo-app-eight-hazel.vercel.app/ "https://todo-app-eight-hazel.vercel.app/")
+# DEMO | [TodoApp](https://todo-app-eight-hazel.vercel.app/ "https://todo-app-eight-hazel.vercel.app/")|
+
 [https://todo-app-eight-hazel.vercel.app/](https://todo-app-eight-hazel.vercel.app/)
 
+[https://www.youtube.com/watch?v=fjefnYEdgfw](https://www.youtube.com/watch?v=fjefnYEdgfw)
 
-
+https://www.youtube.com/watch?v=fjefnYEdgfw
 
 https://github.com/Rockielitte/TodoAppSkyMavis/assets/87406113/e94f6d71-f5d9-4da1-9c65-7afe48268b81
-
 
 ![1710774107984](image/README/1710774107984.png)
 
