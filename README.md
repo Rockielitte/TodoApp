@@ -1,22 +1,29 @@
 # How to run on local
 
-Step 1: Clone git repository into your local
+-Step 1: Clone git repository into your local
 
 `git clone https://github.com/Rockielitte/TodoAppSkyMavis.git`
-Step 2: Move to project and install packages
+
+-Step 2: Move to project and install packages
 
 `cd ./TodoAppSkyMavis`
 
 `npm i`
 
-Step 3 : Run project and open local URL
+-Step 3 : Run project and open local URL
+
 `npm run dev`
 
 `Click on the output URL on Terminal || http://localhost:5173/`
 
 # DEMO | [TodoApp](https://todo-app-eight-hazel.vercel.app/ "https://todo-app-eight-hazel.vercel.app/")
-
 [https://todo-app-eight-hazel.vercel.app/](https://todo-app-eight-hazel.vercel.app/)
+
+
+
+
+https://github.com/Rockielitte/TodoAppSkyMavis/assets/87406113/e94f6d71-f5d9-4da1-9c65-7afe48268b81
+
 
 ![1710774107984](image/README/1710774107984.png)
 
