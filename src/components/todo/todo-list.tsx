@@ -5,7 +5,7 @@ import { formatDistanceToNow } from "date-fns/formatDistanceToNow";
 import { Badge } from "../ui/badge";
 import { useAppDispatch, useAppSelector } from "@/hooks";
 import { TODOSTATENUM } from "@/types";
-import { Check, Minus, X, Zap } from "lucide-react";
+import { Check, Minus, Trash, Zap } from "lucide-react";
 import { Button } from "../ui/button";
 import { removeTodo, toggleTodo } from "@/redux/slices/todo";
 import { Tooltip } from "@radix-ui/react-tooltip";
@@ -96,11 +96,11 @@ export const TodoList: FC<Props> = ({ catorgery }) => {
                           : "text-muted-foreground"
                       )}
                     >
-                      <div className=" font-bold  transition-all duration-200 border-x px-1 border-purple-500">
+                      <div className=" font-bold  transition-all duration-200 border-x px-1 border-purple-500 ">
                         {itemSelected === item.id &&
                           (item.state === TODOSTATENUM.INCOMPLETE ? (
                             <div
-                              className="text-blue-500  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
+                              className="flex flex-row gap-0.5 items-center text-blue-500  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
                               onClick={() => {
                                 dispatch(
                                   toggleTodo({
@@ -118,7 +118,7 @@ export const TodoList: FC<Props> = ({ catorgery }) => {
                             </div>
                           ) : item.state === TODOSTATENUM.COMPLETED ? (
                             <div
-                              className=" cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
+                              className="flex flex-row gap-0.5 items-center  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
                               onClick={() => {
                                 dispatch(
                                   toggleTodo({
@@ -137,7 +137,7 @@ export const TodoList: FC<Props> = ({ catorgery }) => {
                           ) : (
                             <div className="font-bold flex gap-2 items-center ">
                               <div
-                                className=" cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
+                                className="flex flex-row gap-0.5 items-center  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
                                 onClick={() => {
                                   dispatch(
                                     toggleTodo({
@@ -155,7 +155,7 @@ export const TodoList: FC<Props> = ({ catorgery }) => {
                               </div>
                               <span className="self-stretch w-0.5 bg-gradient-to-tl from-purple-50 to-indigo-400"></span>
                               <div
-                                className="text-red-500 font-bold  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
+                                className="flex flex-row gap-0.5 items-center text-red-500 font-bold  cursor-pointer opacity-70 hover:scale-105 hover:opacity-100 transition-all duration-200"
                                 onClick={() => {
                                   dispatch(
                                     toggleTodo({
@@ -189,7 +189,7 @@ export const TodoList: FC<Props> = ({ catorgery }) => {
                               <AlertDialogTrigger>
                                 <Tooltip>
                                   <TooltipTrigger>
-                                    <X className="rounded-full hover:bg-purple-300 cursor-pointer p-1 opacity-50 hover:scale-105 hover:opacity-100" />
+                                    <Trash className="rounded-full hover:bg-purple-300 cursor-pointer p-1 opacity-50 hover:scale-105 hover:opacity-100" />
                                   </TooltipTrigger>
                                   <TooltipContent>
                                     <p>Delete this task.</p>

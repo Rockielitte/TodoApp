@@ -1,5 +1,5 @@
 import { TODOSTATENUM, TodoItem } from "@/types";
-import { Check, Minus, PencilRuler, Zap } from "lucide-react";
+import { Check, FilePenLine, Minus, Zap } from "lucide-react";
 import { Label } from "../ui/label";
 import { Button } from "../ui/button";
 import { z } from "zod";
@@ -26,6 +26,7 @@ import {
 import { useEffect, useState } from "react";
 import { useAppDispatch } from "@/hooks";
 import { editTodo } from "@/redux/slices/todo";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 type Props = {
   item: TodoItem;
@@ -67,10 +68,17 @@ const TodoFormModal = ({ item }: Props) => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <PencilRuler className="rounded-full hover:bg-purple-300 cursor-pointer p-1 opacity-50 hover:opacity-100" />
+      <DialogTrigger>
+        <Tooltip>
+          <TooltipTrigger>
+            <FilePenLine className="rounded-full hover:bg-purple-300 cursor-pointer p-1 opacity-50 hover:opacity-100" />
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Edit this task.</p>
+          </TooltipContent>
+        </Tooltip>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] max-h-[80vh] overflow-auto flex flex-col gap-1 ">
         <DialogHeader>
           <DialogTitle>Edit task</DialogTitle>
           <DialogDescription>
@@ -78,7 +86,7 @@ const TodoFormModal = ({ item }: Props) => {
           </DialogDescription>
         </DialogHeader>
         <form
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-2 overflow-auto flex-1 w-full p-2 py-1"
           noValidate
           onSubmit={handleSubmit(onSubmit)}
         >
@@ -89,7 +97,6 @@ const TodoFormModal = ({ item }: Props) => {
               </Label>
               <div className="col-span-4 flex flex-col gap-1">
                 <Textarea
-                  cols={3}
                   id="title"
                   {...register("title")}
                   className="w-full"

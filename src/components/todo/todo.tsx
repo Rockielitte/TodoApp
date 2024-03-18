@@ -28,6 +28,7 @@ export function Todo() {
     handleSubmit,
 
     formState: { errors, isDirty },
+    reset,
   } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,6 +43,7 @@ export function Todo() {
       createdAt: new Date().toString(),
     };
     dispatch(addTodo(item));
+    reset({ title: "" });
   };
 
   return (
@@ -57,10 +59,10 @@ export function Todo() {
         >
           <Tabs
             defaultValue="all"
-            className="h-full flex flex-col overflow-auto"
+            className="h-full flex flex-col overflow-auto w-full"
           >
-            <div className="flex items-center px-4 py-2 gap-4">
-              <h1 className="text-2xl font-bold text-white uppercase  rounded-full flex items-center gap-1">
+            <div className="flex w-full items-center  gap-4 max-sm:flex-col ">
+              <h1 className="text-2xl font-bold text-white uppercase  rounded-full flex items-center gap-1 ">
                 <img
                   src={logo}
                   className="h-8 object-cover rounded-full
@@ -69,12 +71,12 @@ export function Todo() {
                 <span>Todo</span>
               </h1>
               <form
-                className="flex-1 relative"
+                className="flex-1 relative w-full m-3"
                 noValidate
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <PackagePlus className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                <div className="w-full flex flex-col gap-1">
+                <div className="w-full flex flex-col gap-1 max-sm:px-1">
                   <Input
                     placeholder="Start typing . . ."
                     className="px-9 outline-gradient pr-28 "
