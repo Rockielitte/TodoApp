@@ -88,7 +88,7 @@ export function Todo() {
                     </span>
                   ) : (
                     <span className="col-span-4 text-xs font-normal text-slate-900 ">
-                      Atleast 3 characters required.
+                      Adding task need aleast 3 characters.
                     </span>
                   )}
                 </div>
@@ -154,11 +154,6 @@ export function Todo() {
                     dispatch(clearAllCompleted());
                   }}
                   size={"sm"}
-                  style={
-                    {
-                      // background: "var(--gradient)",
-                    }
-                  }
                   variant={"destructive"}
                   className="  mr-auto  md:ml-auto md:mr-0 font-medium "
                 >
@@ -173,10 +168,6 @@ export function Todo() {
             </div>
           </Tabs>
         </ResizablePanel>
-        {/* <ResizableHandle withHandle className="w-2 " />
-        <ResizablePanel className="flex-1" minSize={30}>
-          <ItemDisplay />
-        </ResizablePanel> */}
       </ResizablePanelGroup>
     </div>
   );

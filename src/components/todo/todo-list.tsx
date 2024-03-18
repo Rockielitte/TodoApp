@@ -90,13 +90,13 @@ export const TodoList: FC<Props> = ({ catorgery }) => {
                     </div>
                     <div
                       className={cn(
-                        " text-xs flex items-center md:gap-3 gap-1  justify-end ",
+                        " text-xs flex items-center md:gap-3 gap-1  justify-end max-sm:flex-col",
                         itemSelected === item.id
                           ? "text-foreground"
                           : "text-muted-foreground"
                       )}
                     >
-                      <div className=" font-bold  transition-all duration-200 border-x px-1 border-purple-500 ">
+                      <div className="max-sm:ml-auto font-bold  transition-all duration-200 border-x px-1 border-purple-500 ">
                         {itemSelected === item.id &&
                           (item.state === TODOSTATENUM.INCOMPLETE ? (
                             <div
@@ -174,8 +174,8 @@ export const TodoList: FC<Props> = ({ catorgery }) => {
                             </div>
                           ))}
                       </div>
-                      <div className="flex gap-2 flex-col md:flex-row items-end md:items-center ">
-                        <span className="p-1 text-balance">
+                      <div className="flex gap-1  items-center max-sm:ml-auto ">
+                        <span className="p-1 max-sm:p-0.5 ">
                           {formatDistanceToNow(
                             new Date(item.updatedAt || item.createdAt),
                             {
